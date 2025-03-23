@@ -54,7 +54,7 @@ The data can be used in various ways:
 1. **Direct download**: Get the CSV file for use in your application
 2. **Git clone**: Clone the entire repository to access both raw PDFs and processed data
    ```
-   git clone https://github.com/username/copper-price-data.git
+   git clone https://github.com/iodize6399/wwmai-copper-data.git
    ```
 3. **Staying updated**: Pull the latest changes periodically to get the most recent data
 
@@ -80,7 +80,7 @@ print(monthly_avg)
 
 The data in this repository has been extracted from PDF documents using Optical Character Recognition (OCR) combined with Large Language Models (LLMs). The automated extraction process might occasionally introduce errors.
 
-**Important:** Users are encouraged to verify any critical data against the original PDF files provided in the `data/raw/` directory. If you find any discrepancies between the CSV data and the source PDFs, please report them by [opening an issue](https://github.com/physx2494/copper-price-data/issues/new) on this repository.
+**Important:** Users are encouraged to verify any critical data against the original PDF files provided in the `data/raw/` directory. If you find any discrepancies between the CSV data and the source PDFs, please report them by [opening an issue](https://github.com/iodize6399/wwmai-copper-data/issues/new) on this repository.
 
 ## Updates
 
