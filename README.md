@@ -20,7 +20,7 @@ copper-price-data/
 │   └── raw/                    # Original PDF circulars
 │       └── YYYY/               # Organized by year
 │           └── MM-Month/       # Then by month
-│               └── YYYY-MM-DD.pdf
+│               └── file.pdf
 │
 └── scripts/                    # Utility scripts for processing
 ```
@@ -33,7 +33,6 @@ The dataset (`data/processed/copper_prices.csv`) contains these fields:
 |-------|-------------|
 | date | Publication date of the price list |
 | reference_number | Document reference number |
-| copper_grade | Specification of the copper product |
 | lme_price_usd_mt | London Metal Exchange price in USD per metric ton |
 | premium_usd_mt | Premium for CC Copper Wire Rods in USD per MT |
 | transaction_cost_usd_mt | Transaction costs in USD per MT |
@@ -43,7 +42,6 @@ The dataset (`data/processed/copper_prices.csv`) contains these fields:
 | base_price_inr_kg | Final calculated base price in INR per kg |
 | valid_from | Start date of price validity |
 | valid_to | End date of price validity |
-| notes | Additional information |
 
 ## Usage
 
@@ -58,23 +56,6 @@ The data can be used in various ways:
    ```
 3. **Staying updated**: Pull the latest changes periodically to get the most recent data
 
-### Example Usage (Python)
-
-```python
-import pandas as pd
-
-# Load the data
-copper_data = pd.read_csv('data/processed/copper_prices.csv')
-
-# Convert date columns to datetime
-date_columns = ['date', 'valid_from', 'valid_to']
-for col in date_columns:
-    copper_data[col] = pd.to_datetime(copper_data[col])
-
-# Analyze price trends
-monthly_avg = copper_data.groupby(copper_data['date'].dt.strftime('%Y-%m'))[['base_price_inr_kg']].mean()
-print(monthly_avg)
-```
 
 ## Data Extraction Method
 
