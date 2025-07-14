@@ -11,18 +11,16 @@ This repo contains copper price data extracted from official WWMAI price list ci
 The repository is organized as follows:
 
 ```
-copper-price-data/
-│
-├── data/
-│   ├── processed/
-│   │   └── copper_prices.csv   # Consolidated dataset in CSV format
-│   │
-│   └── raw/                    # Original PDF circulars
-│       └── YYYY/               # Organized by year
-│           └── MM-Month/       # Then by month
-│               └── file.pdf
-│
-└── scripts/                    # Utility scripts for processing
+wwmai-copper-data/
+└── data/
+   ├── processed/
+   │   └── copper_prices.csv   # Consolidated dataset in CSV format
+   │
+   └── raw/                    # Original PDF circulars
+       └── YYYY/               # Organized by year
+           └── MM-Month/       # Then by month
+               └── file.pdf
+
 ```
 
 ## CSV Data Format
@@ -75,7 +73,14 @@ An interactive, auto-updating chart of the copper base price (INR/kg) over each 
 [View the chart →](https://www.datawrapper.de/_/ilR6g/)
 
 <p align="left">
-  <img src="https://datawrapper.dwcdn.net/ilR6g/full.png" alt="Copper Base Price (INR/kg) — Validity Intervals" width="600"/>
+  <a href="https://www.datawrapper.de/_/ilR6g/" target="_blank" rel="noopener noreferrer">
+    <img
+      src="https://datawrapper.dwcdn.net/ilR6g/full.png"
+      alt="Copper Base Price (INR/kg) — Validity Intervals"
+      width="600"
+      style="max-width: 100%; height: auto;"
+    />
+  </a>
 </p>
 
 The chart fetches the latest CSV from this repository on every load, so all new entries are reflected immediately.
