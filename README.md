@@ -69,6 +69,17 @@ This dataset is updated regularly as new price lists are published. Each update 
 - The original PDF source files
 - Updates to the consolidated CSV
 
+## Interactive Visualization
+An interactive, auto-updating chart of the copper base price (INR/kg) over each validity interval is available on Datawrapper:
+
+[View the chart →](https://www.datawrapper.de/_/ilR6g/)
+
+<p align="left">
+  <img src="https://datawrapper.dwcdn.net/ilR6g/full.png" alt="Copper Base Price (INR/kg) — Validity Intervals" width="600"/>
+</p>
+
+The chart fetches the latest CSV from this repository on every load, so all new entries are reflected immediately.
+
 ## License
 
 This dataset is available under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
