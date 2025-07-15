@@ -23,7 +23,7 @@ wwmai-copper-data/
 
 ```
 
-## CSV Data Format
+## CSV Schema
 
 The dataset (`data/processed/copper_prices.csv`) contains these fields:
 
@@ -52,19 +52,19 @@ The data can be used in various ways:
    ```
    git clone https://github.com/iodize6399/wwmai-copper-data.git
    ```
-3. **Staying updated**: Pull the latest changes periodically to get the most recent data or [access the live dataset directly](https://raw.githubusercontent.com/iodize6399/wwmai-copper-data/refs/heads/main/data/processed/copper_prices.csv)
+3. **Staying updated**: Pull the latest changes periodically to get the most recent data or [access the live dataset directly](https://raw.githubusercontent.com/iodize6399/wwmai-copper-data/refs/heads/main/data/processed/copper_prices.csv).
 
 ## Data Extraction Method
-
 The data in this repository has been extracted from PDF documents using Optical Character Recognition (OCR) combined with Large Language Models (LLMs). The automated extraction process might occasionally introduce errors.
 
 **Important:** Users are encouraged to verify any critical data against the original PDF files provided in the `data/raw/` directory. If you find any discrepancies between the CSV data and the source PDFs, please report them by [opening an issue](https://github.com/iodize6399/wwmai-copper-data/issues/new) on this repository.
 
-## Updates
+## Updates & Versioning  
+This dataset is updated regularly, with new price lists published approximately every **3–4 days**. Each update includes:  
+- The original PDF source files  
+- Updates to the consolidated CSV  
 
-This dataset is updated regularly as new price lists are published. Each update includes:
-- The original PDF source files
-- Updates to the consolidated CSV
+Each price update is marked by a Git tag named after its `valid_from` date (`YYYY-MM-DD`), pointing to the commit that added the new rate as a snapshot of the CSV at that moment.  
 
 ## Interactive Visualization
 An interactive, auto-updating chart of the copper base price (INR/kg) over each validity interval is available on Datawrapper:
@@ -84,15 +84,10 @@ An interactive, auto-updating chart of the copper base price (INR/kg) over each 
 
 The chart fetches the latest CSV from this repository on every load, so all new entries are reflected immediately.
 
-## Versioning
-Each new price update is marked by a Git tag named after its `valid_from` date (`YYYY-MM-DD`):
-
-- Tags point to the commit adding the new rate, serving as a snapshot of the CSV at that moment.
-
 ## License
 
 This dataset is available under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
 ## Disclaimer
 
-This repository is not officially affiliated with the Winding Wires Manufacturers' Association of India. The data is collected from publicly available circulars for research and informational purposes only. Use at your own risk.
+This repository is not officially affiliated with the Winding Wires Manufacturers' Association of India. The data is collected from publicly available circulars for research and informational purposes only. **Use at your own risk.**
