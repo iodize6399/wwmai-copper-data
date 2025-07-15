@@ -6,6 +6,8 @@ A public repository of historical copper price data from the Winding Wires Manuf
 
 This repo contains copper price data extracted from official WWMAI price list circulars. The data tracks the indicative base price of 8 mm dia. Electrolytic CC Copper wire Rods along with all the components that contribute to the final price calculation.
 
+> **Note:** Data is currently published on a **semi‑weekly** cadence. See the [roadmap](#roadmap) below for daily and monthly circulars.
+
 ## Data Structure
 
 The repository is organized as follows:
@@ -57,14 +59,7 @@ The data can be used in various ways:
 ## Data Extraction Method
 The data in this repository has been extracted from PDF documents using Optical Character Recognition (OCR) combined with Large Language Models (LLMs). The automated extraction process might occasionally introduce errors.
 
-**Important:** Users are encouraged to verify any critical data against the original PDF files provided in the `data/raw/` directory. If you find any discrepancies between the CSV data and the source PDFs, please report them by [opening an issue](https://github.com/iodize6399/wwmai-copper-data/issues/new) on this repository.
-
-## Updates & Versioning  
-This dataset is updated regularly, with new price lists published approximately every **3–4 days**. Each update includes:  
-- The original PDF source files  
-- Updates to the consolidated CSV  
-
-Each price update is marked by a Git tag named after its `valid_from` date (`YYYY-MM-DD`), pointing to the commit that added the new rate as a snapshot of the CSV at that moment.  
+**Important:** Users are encouraged to verify any critical data against the original PDF files provided in the `data/raw/` directory. If you find any discrepancies between the CSV data and the source PDFs, please report them by [opening an issue](https://github.com/iodize6399/wwmai-copper-data/issues/new) on this repository. 
 
 ## Interactive Visualization
 An interactive, auto-updating chart of the copper base price (INR/kg) over each validity interval is available on Datawrapper:
@@ -83,6 +78,12 @@ An interactive, auto-updating chart of the copper base price (INR/kg) over each 
 </p>
 
 The chart fetches the latest CSV from this repository on every load, so all new entries are reflected immediately.
+
+## Roadmap
+
+- **Semi‑weekly (current):** New circulars every 3–4 days, ingested and processed.  
+- **Daily (planned):** Automate ingestion of daily circulars.  
+- **Monthly (planned):** Automate ingestion of monthly circulars.  
 
 ## License
 
